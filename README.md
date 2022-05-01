@@ -1,3 +1,11 @@
+Nested Full disk encryption guide for PLAIN encrypttion (Arch Linux):
+
+The guide applies to plain encryption of entire disks (NOT Luks). Using Arch wiki https://wiki.archlinux.org/title/Dm-crypt/Encrypting_an_entire_system#Plain_dm-crypt and making logical adjustments to the procedure template below works well. 
+
+The only problem arises when you try to replace "crypto" to "crypto2" in etc/initcpio/hooks/encrypt2 file. That is because it contains "cryptopt" and "cryptoptions" strings that should not be modified. Otherwise, it's smooth sailing.
+
+*******
+
 Nested Full disk encryption guide (Arch Linux)
 
 Disclamer: This is intended to be used as a reference side by side with the arch linux installation guide on the wiki
